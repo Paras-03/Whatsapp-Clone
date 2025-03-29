@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Box, Flex } from '@chakra-ui/react';
+import Sidebar from './components/Sidebar';
+import Chat from './components/Chat';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Flex h="100vh" bg="gray.100">
+      <Box
+        w="100%"
+        maxW="1400px"
+        m="auto"
+        h="95vh"
+        bg="white"
+        borderRadius="lg"
+        boxShadow="lg"
+        overflow="hidden"
+      >
+        <Flex h="100%">
+          <Box w="30%" borderRight="1px" borderColor="gray.200">
+            <Sidebar />
+          </Box>
+          <Box w="70%">
+            <Chat />
+          </Box>
+        </Flex>
+      </Box>
+    </Flex>
   );
 }
 
