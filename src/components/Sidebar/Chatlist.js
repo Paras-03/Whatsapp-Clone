@@ -1,7 +1,101 @@
 import React, { useState } from 'react';
 import { VStack, Box, Avatar, Text, Flex, Circle, Input, HStack, Button } from '@chakra-ui/react';
 import { FiArchive, FiSearch } from 'react-icons/fi';
-import { chats } from '../../data/mockData';
+
+const chats = [
+  {
+    id: 1,
+    name: "SAVED MESSAGES",
+    lastMessage: "You: Meeting notes from today",
+    timestamp: "12:30 PM",
+    isArchived: false,
+    avatar: "https://bit.ly/sage-adebayo"
+  },
+  {
+    id: 2,
+    name: "Project Team",
+    lastMessage: "Alice: Let's review the updates",
+    timestamp: "11:45 AM",
+    isArchived: false,
+    avatar: null
+  },
+  {
+    id: 3,
+    name: "Tech Updates",
+    lastMessage: "New features released for React 19...",
+    timestamp: "10:15 AM",
+    isArchived: false,
+    avatar: null
+  },
+  {
+    id: 4,
+    name: "Family Group",
+    lastMessage: "Mom: Don't forget dinner tonight!",
+    timestamp: "Yesterday",
+    isArchived: false,
+    avatar: null
+  },
+  {
+    id: 5,
+    name: "John Smith",
+    lastMessage: "See you at the conference",
+    timestamp: "Yesterday",
+    unreadCount: 3,
+    isArchived: false,
+    avatar: "https://bit.ly/dan-abramov"
+  },
+  {
+    id: 6,
+    name: "Design Team",
+    lastMessage: "Sarah shared a file: UI_mockups.fig",
+    timestamp: "Yesterday",
+    unreadCount: 5,
+    isArchived: false,
+    avatar: null
+  },
+  {
+    id: 7,
+    name: "Coffee Club ☕",
+    lastMessage: "Tom: Who's up for morning coffee?",
+    timestamp: "9:20 AM",
+    isArchived: false,
+    avatar: null
+  },
+  {
+    id: 8,
+    name: "Family Group",
+    lastMessage: "Mom: Don't forget dinner tonight!",
+    timestamp: "Yesterday",
+    isArchived: false,
+    avatar: null
+  },
+  {
+    id: 9,
+    name: "John Smith",
+    lastMessage: "See you at the conference",
+    timestamp: "Yesterday",
+    unreadCount: 3,
+    isArchived: false,
+    avatar: "https://bit.ly/dan-abramov"
+  },
+  {
+    id: 10,
+    name: "Design Team",
+    lastMessage: "Sarah shared a file: UI_mockups.fig",
+    timestamp: "Yesterday",
+    unreadCount: 5,
+    isArchived: false,
+    avatar: null
+  },
+  {
+    id: 11,
+    name: "Coffee Club ☕",
+    lastMessage: "Tom: Who's up for morning coffee?",
+    timestamp: "9:20 AM",
+    isArchived: false,
+    avatar: null
+  }
+];
 
 function ChatList() {
   const [activeFilter, setActiveFilter] = useState('All');
