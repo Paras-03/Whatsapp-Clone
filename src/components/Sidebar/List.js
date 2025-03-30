@@ -97,7 +97,7 @@ const chats = [
   }
 ];
 
-function ChatList() {
+function List() {
   const [activeFilter, setActiveFilter] = useState('All');
 
   return (
@@ -263,4 +263,4 @@ function ChatList() {
   );
 }
 
-export default ChatList;
+export default List;
