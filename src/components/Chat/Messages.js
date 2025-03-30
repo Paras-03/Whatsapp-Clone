@@ -1,6 +1,6 @@
 import React from 'react';
 import { VStack, Box, Text } from '@chakra-ui/react';
-import { messages } from '../../data/mockData';
+import { messages } from '../../data/mockData.js';
 
 function Messages() {
     console.log(messages);
