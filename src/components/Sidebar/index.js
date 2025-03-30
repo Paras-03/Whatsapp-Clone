@@ -1,16 +1,14 @@
 import React from 'react';
-import { VStack } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import Header from './Header';
-import SearchBar from './SearchBar';
 import ChatList from './ChatList';
 
 function Sidebar() {
   return (
-    <VStack h="100%" spacing={0}>
+    <Box h="100vh" bg="dark.100">
       <Header />
-      <SearchBar />
       <ChatList />
-    </VStack>
+    </Box>
   );
 }
 
