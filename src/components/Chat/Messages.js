@@ -2,7 +2,7 @@ import React from 'react';
 import { VStack, Box, Text } from '@chakra-ui/react';
 import { messages } from '../../data/mockData';
 
-function ChatMessages() {
+function Messages() {
     console.log(messages);
   return (
     <VStack
@@ -42,4 +42,4 @@ function ChatMessages() {
   );
 }
 
-export default ChatMessages;
+export default Messages;
