@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { VStack, Box, Avatar, Text, Flex, Circle, Input, HStack, Button } from '@chakra-ui/react';
 import { FiArchive, FiSearch } from 'react-icons/fi';
-import {chats} from "../../data/mockData"
+import { chats } from '../../data/mockData';
 
 function ChatList() {
   const [activeFilter, setActiveFilter] = useState('All');
